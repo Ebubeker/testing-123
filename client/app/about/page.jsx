@@ -10,6 +10,15 @@ import TestiAvatar02 from '@/assets/images/images/h4_testi_avatar02.png';
 import TestiAvatar03 from '@/assets/images/images/h4_testi_avatar03.png';
 import AreaBg05 from '@/assets/images/bg/area_bg05.jpg';
 
+export const metadata = {
+  title: "RD - Roofing & Chimney | About",
+  description:
+    "RD Roofing & Chimney exists to provide exceptional workmanship throught the of our product and services; to bring value clients through attentive details,proffessional integrity and aggressive performance",
+  openGraph: {
+    images: ["/aboutOg.png"],
+  },
+};
+
 export default function About() {
   return (
     <>

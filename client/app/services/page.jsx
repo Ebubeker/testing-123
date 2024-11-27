@@ -3,6 +3,15 @@ import Counter2 from "@/components/sections/Counter2";
 import Services1 from "@/components/sections/Services1";
 import RequestService from "@/components/email-forms/RequestService";
 
+export const metadata = {
+  title: "RD - Roofing & Chimney | Services",
+  description:
+    "Checkout the services that RD Roofing & Chimney offers, together with a detailed explanation.",
+  openGraph: {
+    images: ["/servicesOg.png"],
+  },
+};
+
 const ServicesPage = () => {
   return (
     <>

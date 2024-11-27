@@ -1,8 +1,15 @@
-import React from "react";
-import Link from "next/link";
-import Breadcrumb from "@/components/layout/Breadcrumb";
-import ContactUsForm from "./components/ContactUsForm";
 import RequestService from "@/components/email-forms/RequestService";
+import Breadcrumb from "@/components/layout/Breadcrumb";
+import Link from "next/link";
+
+export const metadata = {
+  title: "RD - Roofing & Chimney | Contact",
+  description:
+    "Get in touch with RD Roofing & Chimney for expert roofing and chimney services. Visit our contact page to request a quote, ask questions, or schedule a consultation with our friendly team.",
+  openGraph: {
+    images: ["/contactOg.png"],
+  },
+};
 
 const Contact = () => {
   return (
