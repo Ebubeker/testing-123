@@ -11,9 +11,6 @@ export default function DataBg() {
 
     
     elements.forEach((element) => {
-      console.log(element.getAttribute(
-        "data-background"
-      ))
       element.style.backgroundImage = `url(${element.getAttribute(
         "data-background"
       )})`;

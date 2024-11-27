@@ -48,5 +48,3 @@ export const services = [
     slug: "custom-skylight-installation"
   }
 ];
-
-console.log(services);
