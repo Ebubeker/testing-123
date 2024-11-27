@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@strapi/blocks-react-renderer": "^1.0.1",
+    "@vercel/speed-insights": "^1.1.0",
     "bootstrap": "^5.3.3",
     "next": "15.0.3",
     "qs": "^6.13.1",

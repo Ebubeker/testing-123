@@ -3,6 +3,7 @@ import DataBg from "@/components/elements/DataBg";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import PageHead from "@/components/layout/PageHead";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/assets/css/bootstrap.min.css";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <BackToTop />
+        <SpeedInsights />
       </body>
     </html>
   );
