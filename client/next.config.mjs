@@ -8,6 +8,12 @@ const nextConfig = {
         port: '1337',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'sole-moral-snipe.ngrok-free.com',
+        // port: '1337',
+        pathname: '/**',
+      },
     ],
   }
 };
