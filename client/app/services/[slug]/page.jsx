@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
     description: service.data[0].metaDescription,
     openGraph: {
       // images: [service.data[0].metaImage[0].url],
-      images: [`${process.env.NEXT_PUBLIC_CMS_BASE}${service.data[0].metaImage.url.substring(1)}`],
+      images: [`${process.env.NEXT_PUBLIC_CMS_BASE}${service.data[0].metaImage[0].url.substring(1)}`],
     },
   };
 }

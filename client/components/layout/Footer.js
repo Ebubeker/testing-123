@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import Logo2 from '@/assets/images/logo/logo_02.png'
+import Logo2 from "@/assets/images/logo/logo_02.png";
 import Image from "next/image";
+import FooterServicesList from "./FooterServicesList";
 
 export default function Footer1() {
   return (
@@ -19,11 +20,11 @@ export default function Footer1() {
                     <h2 className="fw-title">About Us</h2>
                     <div className="footer-content">
                       <p>
-                        RD Construction exists to provide exceptional
-                        workmanship throught the of our product and services; to
-                        bring value clients through attentive
-                        details,proffessional integrity and aggressive
-                        performance
+                        At RD Roofing & Chimney, we are proud to be experienced
+                        renovators dedicated to transforming homes and bringing
+                        your visions to life. From new roofs to masonry work, we
+                        combine innovation with tradition to create projects
+                        that stand the test of time.
                       </p>
                     </div>
                   </div>
@@ -33,36 +34,7 @@ export default function Footer1() {
                     <h2 className="fw-title">Our Services</h2>
                     <div className="footer-link">
                       <ul className="list-wrap">
-                        <li>
-                          <Link href="/project">
-                            <i className="fas fa-angle-double-right" />
-                            Residential Roofing
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/project">
-                            <i className="fas fa-angle-double-right" />
-                            Chimney Repairs
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/project">
-                            <i className="fas fa-angle-double-right" />
-                            Siding Replacement
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/project">
-                            <i className="fas fa-angle-double-right" />
-                            Gutter Installation
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/project">
-                            <i className="fas fa-angle-double-right" />
-                            Masonry
-                          </Link>
-                        </li>
+                        <FooterServicesList />
                       </ul>
                     </div>
                   </div>
@@ -73,25 +45,25 @@ export default function Footer1() {
                     <div className="footer-link">
                       <ul className="list-wrap">
                         <li>
-                          <Link href="/contact">
+                          <Link href="/about">
                             <i className="fas fa-angle-double-right" />
                             About
                           </Link>
                         </li>
                         <li>
-                          <Link href="/contact">
+                          <Link href="/faq">
                             <i className="fas fa-angle-double-right" />
                             FAQ
                           </Link>
                         </li>
                         <li>
-                          <Link href="/contact">
+                          <Link href="/blog">
                             <i className="fas fa-angle-double-right" />
                             Blog
                           </Link>
                         </li>
                         <li>
-                          <Link href="/contact">
+                          <Link href="/projects">
                             <i className="fas fa-angle-double-right" />
                             Projects
                           </Link>
@@ -112,7 +84,14 @@ export default function Footer1() {
                   <div className="col-xl-3 col-lg-3 col-md-12">
                     <div className="logo">
                       <Link href="/index">
-                        <Image src={Logo2} alt="White Logo" style={{maxHeight: '55px !important', width: 'auto'}}/>
+                        <Image
+                          src={Logo2}
+                          alt="White Logo"
+                          style={{
+                            maxHeight: "55px !important",
+                            width: "auto",
+                          }}
+                        />
                       </Link>
                     </div>
                   </div>
@@ -138,6 +117,17 @@ export default function Footer1() {
                   <div className="copyright-text">
                     <p>
                       © Copyright {new Date().getFullYear()}. All Right Reserved
+                      | Crafted by{" "}
+                      <a
+                        target="_blank"
+                        href="https://upon.digital/"
+                        style={{
+                          color: "#ffffff70",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        UpOn
+                      </a>
                     </p>
                   </div>
                 </div>

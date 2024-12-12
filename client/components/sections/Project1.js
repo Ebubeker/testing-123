@@ -3,6 +3,7 @@
 import { useGetProjects } from "@/lib/api";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Project1() {
   const [isActive, setIsActive] = useState({
@@ -35,7 +36,7 @@ export default function Project1() {
             <div className="col-lg-8">
               <div className="section-title white-title mb-50 tg-heading-subheading animation-style3">
                 <span className="sub-title tg-element-title">Our Projects</span>
-                <h2 className="title tg-element-title">Explore Our Projects</h2>
+                <h2 className="title tg-element-title">Our Projects</h2>
               </div>
             </div>
             <div className="col-lg-4">
@@ -48,33 +49,48 @@ export default function Project1() {
           </div>
           <div className="row">
             <div className="col-lg-12">
-              {recentProjects
-                ? recentProjects.map((project) => (
-                    <div
-                      key={project.id}
-                      className="project-item wow fadeInUp"
-                      data-wow-delay=".2s"
-                      onMouseEnter={() => handleToggle(1)}
-                      onMouseLeave={() => handleToggle(1)}
-                    >
-                      <div className="project-content">
-                        <div className="left-side-content">
-                          <span>Projects V1</span>
-                          <h2 className="title">
-                            <Link href={`/projects/${project.slug}`}>
-                              {project.name}
-                            </Link>
-                          </h2>
-                        </div>
-                        <div className="project-link">
-                          <Link href="/project-details">
-                            <i className="fas fa-arrow-right" />
+              {recentProjects.length ? (
+                recentProjects.map((project, indx) => (
+                  <div
+                    key={project.id}
+                    className="project-item wow fadeInUp"
+                    data-wow-delay=".2s"
+                    onMouseEnter={() => handleToggle(indx)}
+                    onMouseLeave={() => handleToggle(indx)}
+                  >
+                    <div className="project-content">
+                      <Image
+                        src={`${process.env.NEXT_PUBLIC_CMS_BASE}${project.image[0].url}`}
+                        width={100}
+                        height={100}
+                        alt="Project Image"
+                        className="image-projects"
+                        style={{
+                          objectFit: "cover",
+                          overflowClipMargin: "unset",
+                          borderRadius: "6px",
+                          marginRight: "30px",
+                        }}
+                      />
+                      <div className="left-side-content">
+                        <span>Projects V1</span>
+                        <h2 className="title">
+                          <Link href={`/projects/${project.slug}`}>
+                            {project.name}
                           </Link>
-                        </div>
+                        </h2>
+                      </div>
+                      <div className="project-link">
+                        <Link href={`/projects/${project.slug}`}>
+                          <i className="fas fa-arrow-right" />
+                        </Link>
                       </div>
                     </div>
-                  ))
-                : null}
+                  </div>
+                ))
+              ) : (
+                <h3 style={{ color: "white" }}>No projects</h3>
+              )}
             </div>
           </div>
         </div>

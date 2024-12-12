@@ -4,6 +4,7 @@ import { useGetBlogs } from "@/lib/api";
 import { useEffect, useState } from "react";
 import BlogCard1 from "./BlogCard1";
 import Pagination from "./Pagination";
+import Skeleton from "../common/Skeleton";
 
 export default function BlogPost({ showItem, showPagination, searchFilter }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,10 +51,45 @@ export default function BlogPost({ showItem, showPagination, searchFilter }) {
 
   return (
     <>
-      {getPaginatedProducts.length === 0 && <h3>No Products Found</h3>}
-      {blogs
+      {/* {getPaginatedProducts.length === 0 && <h3>No Products Found</h3>} */}
+      {blogs.length
         ? blogs.map((item, i) => <BlogCard1 key={i} item={item} />)
-        : "loader"}
+        : Array.from({ length: 3 }).map((_, indx) => (
+          <div className="col-xl-4 col-md-6" key={indx}>
+            <div className="blog-post-item">
+              <div className="blog-post-thumb">
+                <div>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      aspectRatio: "1 / 1",
+                      objectFit: "cover",
+                    }}
+                  >
+                    <Skeleton width="100%" height="100%" />
+                  </div>
+                </div>
+              </div>
+              <div className="blog-post-content">
+                <div className="blog-meta">
+                  <ul className="list-wrap">
+                    <li>
+                      <i className="fas fa-calendar-alt" />
+                      <Skeleton width="70px" height="20px" />
+                    </li>
+                  </ul>
+                </div>
+                <div className="mb-10">
+                  <Skeleton width="80%" height="35px" />
+                </div>
+                <div>
+                  <Skeleton width="100%" height="23px" />
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
 
       {showPagination && (
         <Pagination

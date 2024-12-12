@@ -25,6 +25,8 @@ export default function Testimonial1() {
               <div className="testimonial-img">
                 <Image
                   src={TestimonialImg}
+                  width={400}
+                  height={600}
                   alt="Testimonial Image"
                 />
               </div>

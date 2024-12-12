@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `RD - Roofing & Chimney | ${blog.data[0].metaTitle}`,
     description: blog.data[0].metaDescription,
+    keywords: blog.data[0].primaryKeywords.map((key) => key.name),
     openGraph: {
       images: [
         `${

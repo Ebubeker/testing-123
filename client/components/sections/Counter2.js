@@ -42,7 +42,7 @@ export default function Counter2() {
                                     </div>
                                     <div className="counter-content">
                                         {inViewport && <CountUp end={2300} duration={1} />}
-                                        <p>Project Complete</p>
+                                        <p>Projects Complete</p>
                                     </div>
                                 </div>
                             </div>

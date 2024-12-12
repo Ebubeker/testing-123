@@ -2108,6 +2108,14 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+
+	.lg-react-element {
+		grid-template-columns: auto auto;
+	}
+
+	.image-projects {
+		display: none;
+	}
 }
 
 /* Small devices (landscape phones, 576px and up) */

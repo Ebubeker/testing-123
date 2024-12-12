@@ -1,19 +1,35 @@
+import AreaBg05 from "@/assets/images/bg/area_bg05.jpg";
+import TestiAvatar01 from "@/assets/images/images/h4_testi_avatar01.png";
+import TestiAvatar02 from "@/assets/images/images/h4_testi_avatar02.png";
+import TestiAvatar03 from "@/assets/images/images/h4_testi_avatar03.png";
+import Img01 from "@/assets/images/images/history_img01.jpg";
+import Img11 from "@/assets/images/images/history_img011.jpg";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import About1 from "@/components/sections/About1";
-import Services1 from "@/components/sections/Services1";
 import Testimonial1 from "@/components/sections/Testimonial1";
 import Image from "next/image";
-import Img11 from '@/assets/images/images/history_img011.jpg';
-import Img01 from '@/assets/images/images/history_img01.jpg';
-import TestiAvatar01 from '@/assets/images/images/h4_testi_avatar01.png';
-import TestiAvatar02 from '@/assets/images/images/h4_testi_avatar02.png';
-import TestiAvatar03 from '@/assets/images/images/h4_testi_avatar03.png';
-import AreaBg05 from '@/assets/images/bg/area_bg05.jpg';
 
 export const metadata = {
   title: "RD - Roofing & Chimney | About",
   description:
-    "RD Roofing & Chimney exists to provide exceptional workmanship throught the of our product and services; to bring value clients through attentive details,proffessional integrity and aggressive performance",
+    "RD Roofing & Chimney exists to provide exceptional workmanship through our products and services, bringing value to clients through attention to detail, professional integrity, and outstanding performance.",
+  keywords: [
+    "About RD Roofing & Chimney",
+    "Roofing experts in New Jersey",
+    "Chimney service specialists NJ",
+    "Trusted local roofing company",
+    "Experienced roofers NJ",
+    "Professional chimney repair team",
+    "Roofing and chimney expertise",
+    "Why choose RD Roofing & Chimney",
+    "Roofing services with integrity",
+    "Quality roofing solutions NJ",
+    "Customer-focused roofing company",
+    "Chimney maintenance professionals",
+    "Affordable roofing and chimney services",
+    "Roofing company mission NJ",
+    "Trusted roofing contractors NJ",
+  ],
   openGraph: {
     images: ["/aboutOg.png"],
   },
@@ -26,6 +42,22 @@ export default function About() {
       <section className="history-area pt-120 pb-120">
         <div className="container">
           <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="history-img-wrap">
+                <ul className="list-wrap">
+                  <li style={{ display: "flex", justifyContent: "center" }}>
+                    <Image
+                      src={Img11}
+                      alt="History Image"
+                      layout="intrinsic"
+                      width={600}
+                      height={400}
+                      objectFit="cover"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div className="col-lg-6">
               <div className="history-content">
                 <div className="section-title mb-25 tg-heading-subheading animation-style3">
@@ -46,22 +78,6 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="history-img-wrap">
-                <ul className="list-wrap">
-                  <li style={{ display: "flex", justifyContent: "center" }}>
-                    <Image
-                      src={Img11}
-                      alt="History Image"
-                      layout="intrinsic"
-                      width={600}
-                      height={400}
-                      objectFit="cover"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -72,10 +88,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <div
-        className="area-bg-five"
-        data-background={AreaBg05}
-      >
+      <div className="area-bg-five" data-background={AreaBg05}>
         <section className="history-area pt-120 pb-120">
           <div className="container">
             <div className="row align-items-center">
@@ -117,16 +130,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="inner-testimonial-area parallax pb-120 position-relative">
+        <section className="inner-testimonial-area parallax py-20 position-relative">
           <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-6">
-                <div className="section-title text-center mb-50">
-                  <span className="sub-title">Our Testimonial</span>
-                  <h2 className="title">What Our Client Feedback</h2>
-                </div>
-              </div>
-            </div>
             <div className="row justify-content-center">
               <div className="col-lg-10">
                 <div className="testimonial-inner">
@@ -212,7 +217,6 @@ export default function About() {
             </div>
           </div>
         </section>
-        <Services1 />
       </div>
     </>
   );

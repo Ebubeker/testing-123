@@ -42,7 +42,7 @@ const ServicePageMain = ({slug}) => {
             <div className="col-xl-4 col-lg-6">
               <aside className="services-sidebar">
                 <div className="services-widget">
-                  <h4 className="widget-title">Check our other service</h4>
+                  <h4 className="widget-title">Other Service</h4>
                   <div className="our-services-list">
                     <ul className="list-wrap">
                       {services
@@ -63,7 +63,7 @@ const ServicePageMain = ({slug}) => {
           </div>
         </div>
       </section>
-      <div className="pt-115 container">
+      <div className="pt-115 pb-120 container">
         <RequestService
           serviceSlug={service.length ? service[0].slug : undefined}
         />

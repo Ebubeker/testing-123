@@ -44,7 +44,7 @@ const RequestService = ({ serviceSlug }) => {
     <section className="appointment-area">
       {/* <div className="container"> */}
         <div
-          className="appointment-inner mb-120"
+          className="appointment-inner "
           data-background="/assets/img/bg/appointment_bg.jpg"
         >
           <div className="row">

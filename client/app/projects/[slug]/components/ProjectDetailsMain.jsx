@@ -4,6 +4,7 @@ import { useGetProject } from "@/lib/api";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
+import Gallery from "./Gallery";
 
 const ProjectDetailsMain = ({ slug }) => {
   const { data: project } = useGetProject(slug);
@@ -34,6 +35,7 @@ const ProjectDetailsMain = ({ slug }) => {
                     </>
                   ) : null}
                 </div>
+                <Gallery images={project.length ? project[0].gallery : []}/>
               </div>
             </div>
             <div className="col-lg-4">

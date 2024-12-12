@@ -14,11 +14,13 @@ export async function generateMetadata({ params }) {
 
   const project = await fetcher(`projects?${ourQuery}&populate=*&fields=*`);
 
+console.log(project)
+
   return {
     title: `RD - Roofing & Chimney | ${project.data[0].name}`,
     description: project.data[0].description,
     openGraph: {
-      images: [`${process.env.NEXT_PUBLIC_CMS_BASE}${project.data[0].image.url.substring(1)}`],
+      images: [`${process.env.NEXT_PUBLIC_CMS_BASE}${project.data[0].image[0].url.substring(1)}`],
     },
   };
 }

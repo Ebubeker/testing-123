@@ -3,13 +3,11 @@ import { resend } from "@/lib/utils/resend";
 
 export async function POST(req) {
   try {
-    // Parse incoming JSON data
     const data = await req.json();
 
-    // Send email
     const result = await resend.emails.send({
-      from: data.email,
-      to: "info@rdroofingandchimney.us",
+      from: `Acme <${data.email}>`,
+      to: ["info@rdroofingandchimney.us"],
       subject: "New Service Request",
       html: `
         <h3>Service Request Details</h3>
@@ -19,8 +17,10 @@ export async function POST(req) {
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Address:</strong> ${data.address}</p>
         <p><strong>City:</strong> ${data.city}</p>
-        <p><strong>State:</strong> ${data.state}</p>
-        <p><strong>Message:</strong> ${data.message}</p>
+        <p><strong>Service:</strong> ${data.Service}</p>
+        <br />
+        <br />
+        <p>${data.message}</p>
       `,
     });
 
